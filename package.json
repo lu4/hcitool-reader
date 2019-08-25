@@ -2,13 +2,13 @@
     "name": "hcitool-reader",
     "version": "1.2.2",
     "description": "Typescript CLI Boilerplate",
-    "main": "src/index.ts",
-    "module": "src/index.ts",
+    "main": "src/index.js",
+    "module": "src/index.js",
     "repository": "https://github.com/lu4/hcitool-reader",
     "license": "MIT",
     "keywords": [],
     "bin": {
-        "hcitool-reader": "./bin/launch.ts"
+        "hcitool-reader": "./bin/launch.js"
     },
     "preferGlobal": true,
     "scripts": {
