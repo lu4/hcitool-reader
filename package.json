@@ -8,7 +8,7 @@
     "license": "MIT",
     "keywords": [],
     "bin": {
-        "hcitool-reader": "./bin/launch.js"
+        "hcitool-reader": "./bin/launch.ts"
     },
     "preferGlobal": true,
     "scripts": {
