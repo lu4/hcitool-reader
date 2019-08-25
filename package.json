@@ -1,6 +1,6 @@
 {
     "name": "hcitool-reader",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "description": "Typescript CLI Boilerplate",
     "main": "src/index.js",
     "module": "src/index.js",
