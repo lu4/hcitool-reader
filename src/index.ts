@@ -12,12 +12,19 @@ export class Runner {
         let directory = './commands';
         let filenames = fs
             .readdirSync(path.join(__dirname, directory))
-            .filter(filename => path.extname(filename) === '.ts');
+            .filter(filename => path.extname(filename) === '.d.ts' || path.extname(filename) === '.ts');
 
         let descriptors: Array<Descriptor<Command>> = [];
 
         for (let filename of filenames) {
             let joined = path.join(directory, filename);
+
+            if (joined.toLocaleLowerCase().endsWith('.d.ts')) {
+                joined = joined.substring(0, joined.length - 5);
+            } else if (joined.toLocaleLowerCase().endsWith('.ts')) {
+                joined = joined.substring(0, joined.length - 3);
+            }
+
             let module = await import(`./${joined}`);
 
             let declarations: Array<new () => Command> = Object.keys(module).map(key => module[key]);
