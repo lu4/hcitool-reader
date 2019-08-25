@@ -1,6 +1,5 @@
-#!/usr/bin/env ts-node
-import path from 'path';
-import { Runner } from '../src';
+#!/usr/bin/env node
+const { Runner } = require('.');
 
 Runner.main(path.join(__dirname, '..'));
 
